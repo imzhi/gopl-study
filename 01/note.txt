@@ -17,3 +17,6 @@ map 存储键值对，键可以是能用 == 运算符比较的任意类型，值
 map 迭代顺序是随机的
 ReadFile 函数返回一个字节切片（byte slice），必须转换为 string，才能用 strings.Split 分割
 bufio.Scanner、ioutil.ReadFile 和 ioutil.WriteFile 都使用 *os.File 的 Read 和 Write 方法
+
+1.4 节
+struct 是一组值或者叫字段的集合

@@ -19,4 +19,23 @@ ReadFile 函数返回一个字节切片（byte slice），必须转换为 string
 bufio.Scanner、ioutil.ReadFile 和 ioutil.WriteFile 都使用 *os.File 的 Read 和 Write 方法
 
 1.4 节
+[]color.Color{...} 和 gif.GIF{...} 是复合声明，前者是 slice 切片，后者是 struct 结构体
 struct 是一组值或者叫字段的集合
+
+1.5 节
+resp.Body.Close关闭resp的Body流，防止资源泄露
+
+1.6 节
+goroutine 是函数的并发执行方式，channel 用来在 goroutine 之间进行参数传递
+main 函数运行在 goroutine
+go function 表示创建新的 goroutine，并在新的 goroutine 中执行函数
+当一个 goroutine 尝试在一个 channel 上做 send 或者 receive 操作时，这个 goroutine 会阻塞在调用处，直到另一个 goroutine 往这个 channel 里写入或者接收值，这样两个 goroutine 才会继续执行 channel 操作之后的逻辑（没看懂）
+
+1.7 节
+fmt.Fprintf 标准输出流
+解决竞态条件：每次修改变量最多只能有一个 goroutine
+
+1.8 节
+switch 不需要写 break；增加了 falltrough 顺序执行下去
+switch 可以不带操作对象，默认用 true 代替
+指针是可见的内存地址，& 操作符返回变量的内存地址，* 操作符获取指针指向的变量内容，不能进行指针运算
